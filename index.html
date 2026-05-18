@@ -7,7 +7,7 @@
   <meta name="description" content="База знаний РВПИ сервера">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   
-  <!-- Официальная стабильная темная тема (фиксирует проблемы с отображением меню) -->
+  <!-- Официальная стабильная темная тема -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
 
   <style>
@@ -30,6 +30,21 @@
       background-color: #1c1d24 !important; /* Цвет поля поиска */
       color: #ffffff !important;
       border: 1px solid #2d2f39 !important;
+    }
+    
+    /* ФИКС КНОПКИ: Переносим кнопку скрытия панели наверх */
+    .sidebar-toggle {
+      bottom: auto !important;
+      top: 20px !important;
+      left: 320px !important; /* Становится ровно справа от открытого меню */
+      background: #121318 !important;
+      border: 1px solid #2d2f39 !important;
+      border-radius: 4px !important;
+      padding: 10px !important;
+    }
+    /* Сдвигаем кнопку левее, когда меню закрыто */
+    body.close .sidebar-toggle {
+      left: 20px !important;
     }
   </style>
 </head>
