@@ -30,29 +30,19 @@
       background-color: #1c1d24 !important; /* Цвет поля поиска */
       color: #ffffff !important;
       border: 1px solid #2d2f39 !important;
-    }
-    
-    /* ФИКС КНОПКИ: Делаем её аккуратной и маленькой наверху */
+    } 
+    /* ФИКС КНОПКИ: Поднимаем наверх и делаем движение плавным */
     .sidebar-toggle {
       bottom: auto !important;
-      top: 15px !important;
-      left: 315px !important; /* Рядом с краем открытого меню */
-      background: transparent !important; /* Убираем громоздкий фон */
-      border: none !important;            /* Убираем рамки */
-      padding: 5px !important;            /* Уменьшаем размер */
-      width: auto !important;
-      height: auto !important;
+      top: 0 !important; /* Переносим в самый верх */
+      background: transparent !important;
+      border: none !important;
+      padding: 20px !important; /* Удобная зона для клика */
+      transition: opacity 0.3s ease !important; /* Плавное появление */
     }
-    /* Сдвигаем кнопку обратно к левому краю, когда меню скрыто */
-    body.close .sidebar-toggle {
-      left: 15px !important;
-    }
-    /* Делаем три полоски внутри кнопки аккуратными и белыми */
+    /* Делаем полоски внутри кнопки белыми и аккуратными */
     .sidebar-toggle span {
       background: #ffffff !important;
-      width: 18px !important;
-      height: 2px !important;
-      margin-bottom: 3px !important;
     }
   </style>
 </head>
