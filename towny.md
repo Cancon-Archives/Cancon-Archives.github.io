@@ -1183,40 +1183,8 @@ Towny позволяет настраивать схему именования 
 
 Пример структуры уровня города:
 
-```yaml
-  - numResidents: 1
-    namePrefix: ''
-    namePostfix: ' (Settlement)'
-    mayorPrefix: 'Hermit '
-    mayorPostfix: ''
-    townBlockBuyBonusLimit: 0
-    townBlockLimit: 16
-    upkeepModifier: 1.0
-    townOutpostLimit: 0
-    debtCapModifier: 1.0
-    peacefulCostMultiplier: 1.0
-    bankCapModifier: 1.0
-    resourceProductionModifier: 1.0
-    townBlockTypeLimits:
-    - shop: 2
-    - arena: 2
-
-  - numResidents: 2
-    namePrefix: ''
-    namePostfix: ' (Hamlet)'
-    mayorPrefix: 'Chief '
-    mayorPostfix: ''
-    townBlockBuyBonusLimit: 0
-    townBlockLimit: 32
-    upkeepModifier: 1.0
-    townOutpostLimit: 1
-    debtCapModifier: 1.0
-    peacefulCostMultiplier: 1.0
-    bankCapModifier: 1.0
-    resourceProductionModifier: 1.0
-    townBlockTypeLimits:
-    - shop: 5
-    - arena: 4
+00000
+000000
 
 ### Пояснение переменных `town_level`
 
@@ -1241,11 +1209,10 @@ Towny позволяет настраивать схему именования 
 
 ---
 
-### 🚩 Уровень нации (nation_level)
+### 🚩 Уровень нации (`nation_level`)
 
-Пример структуры уровня города:
+Основная структура строки уровня нации:
 
-```yaml
         -   numResidents: 10
             capitalPrefix: ''
             capitalPostfix: ''
