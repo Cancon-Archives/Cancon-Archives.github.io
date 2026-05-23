@@ -1,4 +1,4 @@
-**SGA-конвертер**
+##SGA-конвертер
 
 <style>
   .sga-converter {
@@ -66,7 +66,7 @@
 
 ---
 
-**Калькулятор брони**
+##Калькулятор брони
 
 <style>
   .armor-calc {
@@ -197,4 +197,115 @@
   <div class="note">
     💡 Макс. 4×IV = 16 для каждого типа | EPF ограничен 20 | Невесомость — только на ботинках
   </div>
+</div>
+
+---
+
+##Калькулятор топлива
+
+<style>
+  .fuel-calc {
+    background: #121318;
+    color: #f5f5f7;
+    padding: 25px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .fuel-calc .section-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #bb86fc;
+    margin: 15px 0 10px 0;
+  }
+  .fuel-calc .field {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+  }
+  .fuel-calc .field label {
+    width: 220px;
+    color: #d4bbff;
+  }
+  .fuel-calc input, .fuel-calc select {
+    padding: 6px;
+    font-size: 14px;
+    background: #0b0c0f;
+    color: #f5f5f7;
+    border: 1px solid #333;
+    border-radius: 4px;
+    width: 250px;
+  }
+  .fuel-calc button {
+    background: #bb86fc;
+    color: #121318;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .fuel-calc button:hover {
+    background: #9c5fdb;
+  }
+  .fuel-calc .result {
+    background: #1a0033;
+    border: 1px solid #333;
+    padding: 15px;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+    min-height: 120px;
+    border-radius: 4px;
+    color: #e0bbff;
+  }
+  .fuel-calc .tip {
+    color: #888;
+    font-size: 0.85em;
+    margin-top: 15px;
+  }
+</style>
+
+<div class="fuel-calc">
+  <h3>🔥 Калькулятор топлива — Minecraft</h3>
+
+  <div class="section-title">Параметры</div>
+
+  <div class="field">
+    <label>Сколько предметов нужно переплавить:</label>
+    <input type="number" id="fuelNeeded" value="100" min="1" step="1">
+  </div>
+
+  <div class="field">
+    <label>Вид топлива:</label>
+    <select id="fuelType">
+      <option value="Лавовое ведро" selected>Лавовое ведро</option>
+      <option value="Угольный блок">Угольный блок</option>
+      <option value="Блок ламинарии">Блок ламинарии</option>
+      <option value="Блок сушёной ламинарии">Блок сушёной ламинарии</option>
+      <option value="Уголь / Древесный уголь">Уголь / Древесный уголь</option>
+      <option value="Стержень ифрита">Стержень ифрита</option>
+      <option value="Блок бамбука">Блок бамбука</option>
+      <option value="Древесина / Брёвна">Древесина / Брёвна</option>
+      <option value="Доски">Доски</option>
+      <option value="Саженицы">Саженицы</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Тип печи (для времени):</label>
+    <select id="furnaceType">
+      <option value="Обычная печь" selected>Обычная печь</option>
+      <option value="Доменная печь / Коптильня">Доменная печь / Коптильня</option>
+    </select>
+  </div>
+
+  <button onclick="calculateFuel()">🔥 Рассчитать затраты топлива</button>
+
+  <div class="section-title">Результат</div>
+  <div id="fuelResult" class="result"></div>
+
+  <div class="tip">💡 Совет: лавовое ведро — самое выгодное топливо (100 предметов на 1 ведро)</div>
 </div>
