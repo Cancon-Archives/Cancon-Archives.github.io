@@ -158,36 +158,35 @@
   <div class="field">
     <label>Защита (суммарно, 0–16):</label>
     <select id="protLevel">
-      <!-- options 0..16 -->
-      <script>for(let i=0;i<=16;i++) document.write('<option value="'+i+'" '+(i==16?'selected':'')+'>'+i+'</option>');</script>
+      <option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16" selected>16</option>
     </select>
   </div>
 
   <div class="field">
     <label>Защита от снарядов (0–16):</label>
     <select id="projLevel">
-      <script>for(let i=0;i<=16;i++) document.write('<option value="'+i+'">'+i+'</option>');</script>
+      <option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option>
     </select>
   </div>
 
   <div class="field">
     <label>Взрывоустойчивость (0–16):</label>
     <select id="blastLevel">
-      <script>for(let i=0;i<=16;i++) document.write('<option value="'+i+'">'+i+'</option>');</script>
+      <option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option>
     </select>
   </div>
 
   <div class="field">
     <label>Огнестойкость (0–16):</label>
     <select id="fireLevel">
-      <script>for(let i=0;i<=16;i++) document.write('<option value="'+i+'">'+i+'</option>');</script>
+      <option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option>
     </select>
   </div>
 
   <div class="field">
     <label>Невесомость (0–4):</label>
     <select id="ffLevel">
-      <script>for(let i=0;i<=4;i++) document.write('<option value="'+i+'">'+i+'</option>');</script>
+      <option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
     </select>
   </div>
 
