@@ -1,3 +1,5 @@
+**SGA-конвертер**
+
 <style>
   .sga-converter {
     background: #121318;
@@ -60,4 +62,140 @@
   <textarea id="engOutput" rows="3" readonly placeholder="English появится здесь"></textarea>
 
   <p style="color:#888; font-size:0.9em;">💡 Копируй текст из книги (Ctrl+A → Ctrl+C) → вставь в поле → жми кнопку → Ctrl+V куда нужно!</p>
+</div>
+
+---
+
+**Калькулятор брони**
+
+<style>
+  .armor-calc {
+    background: #121318;
+    color: #f5f5f7;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .armor-calc .field {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .armor-calc .field label {
+    width: 220px;
+    margin-right: 10px;
+  }
+  .armor-calc input, .armor-calc select {
+    padding: 6px;
+    font-size: 14px;
+    background: #0b0c0f;
+    color: #f5f5f7;
+    border: 1px solid #333;
+    border-radius: 4px;
+  }
+  .armor-calc button {
+    background: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 15px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .armor-calc button:hover {
+    background: #e03d00;
+  }
+  .armor-calc .result {
+    background: #0b0c0f;
+    border: 1px solid #333;
+    padding: 12px;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+    min-height: 100px;
+    border-radius: 4px;
+    margin-top: 15px;
+  }
+  .armor-calc .note {
+    color: #888;
+    font-size: 0.85em;
+    margin-top: 5px;
+  }
+</style>
+
+<div class="armor-calc">
+  <h3>⚔️ Minecraft — Калькулятор урона по броне</h3>
+
+  <div class="field">
+    <label>Входящий урон:</label>
+    <input type="number" id="armorIncoming" value="10" step="any" min="0">
+  </div>
+  <div class="field">
+    <label>Очки брони (0–20):</label>
+    <input type="number" id="armorPoints" value="20" step="any" min="0" max="20">
+  </div>
+  <div class="field">
+    <label>Твёрдость (0–12):</label>
+    <input type="number" id="armorToughness" value="12" step="any" min="0" max="12">
+  </div>
+
+  <hr style="border-color:#333; margin: 15px 0;">
+
+  <div class="field">
+    <label>Тип урона:</label>
+    <select id="damageType">
+      <option value="Общий" selected>Общий</option>
+      <option value="Снаряды">Снаряды</option>
+      <option value="Взрыв">Взрыв</option>
+      <option value="Огонь">Огонь</option>
+      <option value="Падение">Падение</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Защита (суммарно, 0–16):</label>
+    <select id="protLevel">
+      <!-- options 0..16 -->
+      <script>for(let i=0;i<=16;i++) document.write('<option value="'+i+'" '+(i==16?'selected':'')+'>'+i+'</option>');</script>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Защита от снарядов (0–16):</label>
+    <select id="projLevel">
+      <script>for(let i=0;i<=16;i++) document.write('<option value="'+i+'">'+i+'</option>');</script>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Взрывоустойчивость (0–16):</label>
+    <select id="blastLevel">
+      <script>for(let i=0;i<=16;i++) document.write('<option value="'+i+'">'+i+'</option>');</script>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Огнестойкость (0–16):</label>
+    <select id="fireLevel">
+      <script>for(let i=0;i<=16;i++) document.write('<option value="'+i+'">'+i+'</option>');</script>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Невесомость (0–4):</label>
+    <select id="ffLevel">
+      <script>for(let i=0;i<=4;i++) document.write('<option value="'+i+'">'+i+'</option>');</script>
+    </select>
+  </div>
+
+  <button onclick="calculateArmorDamage()">🛡️ Рассчитать полученный урон</button>
+
+  <div id="armorResult" class="result"></div>
+
+  <div class="note">
+    💡 Макс. 4×IV = 16 для каждого типа | EPF ограничен 20 | Невесомость — только на ботинках
+  </div>
 </div>
